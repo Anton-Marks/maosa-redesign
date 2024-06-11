@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="es">
 
 <head>
 
@@ -88,23 +88,23 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)">¿Quienes Somos?</a>
+                        <a class="nav-link current-item-menu" href="javascript:void(0)" data-menu="main-menu-maosa" data-swiper-index="1" id="maosa-mn-about" >¿Quienes Somos?</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)">Nuestros Productos</a>
+                        <a class="nav-link" href="javascript:void(0)" data-menu="main-menu-maosa" data-swiper-index="2" id="maosa-mn-products">Nuestros Productos</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)">¿Dónde Operamos?</a>
+                        <a class="nav-link" href="javascript:void(0)" data-menu="main-menu-maosa" data-swiper-index="3" id="maosa-mn-operation">¿Dónde Operamos?</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)">Nuestros Clientes</a>
+                        <a class="nav-link" href="javascript:void(0)" data-menu="main-menu-maosa" data-swiper-index="4" id="maosa-mn-clients">Nuestros Clientes</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)">Contacto</a>
+                        <a class="nav-link" href="javascript:void(0)" data-menu="main-menu-maosa" data-swiper-index="5" id="maosa-mn-contact">Contacto</a>
                     </li>
                 </ul>
                 <div class="search">
@@ -123,13 +123,13 @@
     <header class="slider slider-prlx">
         <div class="swiper-container parallax-slider">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
+                <div class="swiper-slide" data-menu="maosa-mn-about">
                     <div class="bg-img valign" data-background="img/slid/maosa-01.png" data-overlay-dark="6">
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="caption dig">
-                                        <h1 data-splitting>Unique <div class="tline">brand Stories</div>
+                                        <h1 data-splitting>¿Quienes <div class="tline">Somos?</div>
                                         </h1>
                                         <a href="javascript:void(0)" class="simple-btn mt-50">
                                             <span>Discover Works</span>
@@ -140,13 +140,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide" data-menu="maosa-mn-products">
                     <div class="bg-img valign" data-background="img/slid/maosa-03.jpg" data-overlay-dark="6">
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="caption dig">
-                                        <h1 data-splitting>Digital <div class="tline">Design Awards</div>
+                                        <h1 data-splitting>Nuestros <div class="tline">productos</div>
                                         </h1>
                                         <a href="javascript:void(0)" class="simple-btn mt-50">
                                             <span>Discover Works</span>
@@ -157,13 +157,47 @@
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide" data-menu="maosa-mn-operation">
                     <div class="bg-img valign" data-background="img/slid/maosa-02.jpg" data-overlay-dark="6">
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="caption dig">
-                                        <h1 data-splitting>Original <div class="tline">Solutions</div>
+                                        <h1 data-splitting>¿Dónde <div class="tline">Operamos?</div>
+                                        </h1>
+                                        <a href="javascript:void(0)" class="simple-btn mt-50">
+                                            <span>Discover Works</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide" data-menu="maosa-mn-clients">
+                    <div class="bg-img valign" data-background="img/slid/maosa-03.jpg" data-overlay-dark="6">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="caption dig">
+                                        <h1 data-splitting>Nuestros <div class="tline">Clientes</div>
+                                        </h1>
+                                        <a href="javascript:void(0)" class="simple-btn mt-50">
+                                            <span>Discover Works</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide" data-menu="maosa-mn-contact">
+                    <div class="bg-img valign" data-background="img/slid/maosa-02.jpg" data-overlay-dark="6">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="caption dig">
+                                        <h1 data-splitting>Contacto
                                         </h1>
                                         <a href="javascript:void(0)" class="simple-btn mt-50">
                                             <span>Discover Works</span>
@@ -727,28 +761,20 @@
                     </div>
                 </div>
                 <div class="col-lg-5 offset-lg-2">
-                    <div class="subscribe mb-50">
-                        <h6 class="custom-font stit simple-btn">Newslatter</h6>
-                        <p>Sign up for subscribe out newsletter!</p>
-                        <form>
-                            <div class="form-group custom-font">
-                                <input type="email" name="subscribe" placeholder="Your Email">
-                                <button class="cursor-pointer">Subscribe</button>
-                            </div>
-                        </form>
-                    </div>
                     <div class="insta">
                         <h6 class="custom-font stit simple-btn">Menú de Navegación</h6>
-                        <div class="insta-gallary">
-                            <a href="#0">
-                                <img src="img/insta/1.jpg" alt="">
-                            </a>
-                            <a href="#0">
-                                <img src="img/insta/2.jpg" alt="">
-                            </a>
-                            <a href="#0">
-                                <img src="img/insta/3.jpg" alt="">
-                            </a>
+                        <div class="insta-gallary" style="display: flex; flex-wrap: wrap;">
+                            
+                            <a href="javascript:void(0)" class="m-maosa-footer current-item-menu" data-menu="main-menu-maosa-f" data-swiper-index-f="1" id="maosa-mn-about-f" >¿Quienes Somos?</a>
+
+                            <a href="javascript:void(0)" class="m-maosa-footer" data-menu="main-menu-maosa-f" data-swiper-index-f="2" id="maosa-mn-products-f">Nuestros Productos</a>
+
+                            <a href="javascript:void(0)" class="m-maosa-footer" data-menu="main-menu-maosa-f" data-swiper-index-f="3" id="maosa-mn-operation-f">¿Dónde Operamos?</a>
+                            
+                            <a href="javascript:void(0)" class="m-maosa-footer" data-menu="main-menu-maosa-f" data-swiper-index-f="4" id="maosa-mn-clients-f">Nuestros Clientes</a>
+                            
+                            <a href="javascript:void(0)" class="m-maosa-footer" data-menu="main-menu-maosa-f" data-swiper-index-f="5" id="maosa-mn-contact-f">Contacto</a>
+                            
                         </div>
                     </div>
                 </div>
@@ -763,7 +789,7 @@
 
 
 
-
+    progress-wrap cursor-pointer active-progress
 
 
     <!-- jQuery -->

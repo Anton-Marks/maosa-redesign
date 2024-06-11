@@ -109,10 +109,30 @@ $(function () {
     /* ===============================  Swiper slider  =============================== */
 
 
+    const removeCurrentClassAllElementsMenuMain = () => {
+        const elements = document.querySelectorAll('[data-menu="main-menu-maosa"]');
+        const elementsFooter = document.querySelectorAll('[data-menu="main-menu-maosa-f"]');
+        elements.forEach((element) => {
+            element.classList.remove('current-item-menu');
+        });
+        elementsFooter.forEach((element) => {
+            element.classList.remove('current-item-menu');
+        });
+    }
+
+
+    const changeCurrentItemMenu = (indentifier) => {
+        removeCurrentClassAllElementsMenuMain();
+        document.querySelector(`#${indentifier}`).classList.add('current-item-menu');
+        document.querySelector(`#${indentifier}-f`).classList.add('current-item-menu');
+    }
+
+
     var parallaxSlider;
     var parallaxSliderOptions = {
-        speed: 1000,
-        autoplay: true,
+        speed: 2000,
+        //spaceBetween: 1000,
+        //autoplay: true,
         parallax: true,
         loop: true,
 
@@ -129,14 +149,21 @@ $(function () {
             },
             resize: function () {
                 this.update();
-            }
+            },
+            realIndexChange: function () {
+                console.log(this.realIndex);
+                let index = this.realIndex + 1; 
+                let current_data = this.slides[index].dataset.menu;
+                console.log(current_data);
+                changeCurrentItemMenu(current_data);
+            },
         },
 
-        pagination: {
+        /*pagination: {
             el: '.slider-prlx .parallax-slider .swiper-pagination',
             type: 'fraction',
             clickable: true
-        },
+        },*/
 
         navigation: {
             nextEl: '.slider-prlx .parallax-slider .next-ctrl',
@@ -144,6 +171,24 @@ $(function () {
         }
     };
     parallaxSlider = new Swiper('.slider-prlx .parallax-slider', parallaxSliderOptions);
+
+
+    const elMenuMain = document.querySelectorAll('[data-swiper-index]');
+    elMenuMain.forEach((elemento) => {
+        elemento.addEventListener('click', (evento) => {
+            const indexMenu = elemento.getAttribute('data-swiper-index');
+            parallaxSlider.slideTo(indexMenu, 2000, false)
+        });
+    });
+
+    const elMenuMainF = document.querySelectorAll('[data-swiper-index-f]');
+    elMenuMainF.forEach((elemento) => {
+        elemento.addEventListener('click', (evento) => {
+            const indexMenu = elemento.getAttribute('data-swiper-index-f');
+            parallaxSlider.slideTo(indexMenu, 2000, false)
+        });
+    });
+
 
 
     var parallaxShowCase;
