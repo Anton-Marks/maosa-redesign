@@ -120,22 +120,22 @@ $(function () {
         });
     }
 
-
     const changeCurrentItemMenu = (indentifier) => {
         removeCurrentClassAllElementsMenuMain();
         document.querySelector(`#${indentifier}`).classList.add('current-item-menu');
         document.querySelector(`#${indentifier}-f`).classList.add('current-item-menu');
     }
 
-
     var parallaxSlider;
     var parallaxSliderOptions = {
         speed: 2000,
         //spaceBetween: 1000,
-        //autoplay: true,
+        autoplay: {
+            delay: 7000,
+            disableOnInteraction: false,
+        },
         parallax: true,
         loop: true,
-
         on: {
             init: function () {
                 var swiper = this;
@@ -151,10 +151,8 @@ $(function () {
                 this.update();
             },
             realIndexChange: function () {
-                console.log(this.realIndex);
                 let index = this.realIndex + 1; 
                 let current_data = this.slides[index].dataset.menu;
-                console.log(current_data);
                 changeCurrentItemMenu(current_data);
             },
         },
@@ -170,6 +168,7 @@ $(function () {
             prevEl: '.slider-prlx .parallax-slider .prev-ctrl'
         }
     };
+
     parallaxSlider = new Swiper('.slider-prlx .parallax-slider', parallaxSliderOptions);
 
 
@@ -188,8 +187,6 @@ $(function () {
             parallaxSlider.slideTo(indexMenu, 2000, false)
         });
     });
-
-
 
     var parallaxShowCase;
     var parallaxShowCaseOptions = {
@@ -226,8 +223,8 @@ $(function () {
             prevEl: '.showcase-full .parallax-slider .prev-ctrl'
         }
     };
-    parallaxShowCase = new Swiper('.showcase-full .parallax-slider', parallaxShowCaseOptions);
 
+    parallaxShowCase = new Swiper('.showcase-full .parallax-slider', parallaxShowCaseOptions);
 
     var swiperWorkMetro = new Swiper('.metro .swiper-container', {
         slidesPerView: 2,
@@ -297,7 +294,6 @@ $(function () {
         },
     });
 
-
     var swiperBusImg = new Swiper('.slider-bus .swiper-img', {
         slidesPerView: 1,
         spaceBetween: 0,
@@ -335,7 +331,6 @@ $(function () {
             prevEl: '.slider-bus .prev-ctrl'
         },
     });
-
 
     var swiperTestimBox = new Swiper('.testim-box .swiper-container', {
         slidesPerView: 1,
@@ -420,7 +415,6 @@ $(function () {
         ]
     });
 
-
     $('.blog-curs .blg-swipe').slick({
         slidesToShow: 2,
         slidesToScroll: 1,
@@ -451,7 +445,6 @@ $(function () {
         ]
     });
 
-
     $('.clients-brand .brands-crs').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
@@ -480,11 +473,9 @@ $(function () {
         ]
     });
 
-
     /* ===============================  YouTubePopUp  =============================== */
 
     $("a.vid").YouTubePopUp();
-
 
     /* ===============================  parallaxie  =============================== */
 
@@ -493,7 +484,6 @@ $(function () {
         size: "cover"
     });
 
-
     /* ===============================  justifiedGallery  =============================== */
 
     $('.justified-gallery').justifiedGallery({
@@ -501,7 +491,6 @@ $(function () {
         lastRow: 'nojustify',
         margins: 15
     });
-
 
     /* ===============================  skills-circle  =============================== */
 
@@ -535,14 +524,12 @@ $(function () {
         });
     });
 
-
     /* ===============================  countUp  =============================== */
 
     $('.number-sec .count').countUp({
         delay: 10,
         time: 500
     });
-
 
     /* ===============================  tooltip  =============================== */
 
